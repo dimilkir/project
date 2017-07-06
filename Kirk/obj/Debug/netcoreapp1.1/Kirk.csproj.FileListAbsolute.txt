@@ -1,0 +1,8 @@
+C:\Users\user0\project\Kirk\bin\Debug\netcoreapp1.1\Kirk.deps.json
+C:\Users\user0\project\Kirk\bin\Debug\netcoreapp1.1\Kirk.runtimeconfig.json
+C:\Users\user0\project\Kirk\bin\Debug\netcoreapp1.1\Kirk.runtimeconfig.dev.json
+C:\Users\user0\project\Kirk\bin\Debug\netcoreapp1.1\Kirk.dll
+C:\Users\user0\project\Kirk\bin\Debug\netcoreapp1.1\Kirk.pdb
+C:\Users\user0\project\Kirk\obj\Debug\netcoreapp1.1\Kirk.AssemblyInfo.cs
+C:\Users\user0\project\Kirk\obj\Debug\netcoreapp1.1\Kirk.dll
+C:\Users\user0\project\Kirk\obj\Debug\netcoreapp1.1\Kirk.pdb
