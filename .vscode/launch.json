@@ -1,6 +1,164 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
+        {
+            "type": "extensionHost",
+            "request": "launch",
+            "name": "Запуск расширения",
+            "runtimeExecutable": "${execPath}",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceRoot}"
+            ],
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ],
+            "preLaunchTask": "npm"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mocha Tests",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "args": [
+                "-u",
+                "tdd",
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceRoot}/test"
+            ],
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to Remote",
+            "address": "TCP/IP address of process to be debugged",
+            "port": 5858,
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "Absolute path to the remote directory containing the program"
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach to Process",
+            "processId": "${command:PickProcess}",
+            "port": 5858
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Electron Main",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            },
+            "program": "${workspaceRoot}/main.js",
+            "protocol": "legacy"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "nodemon",
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": [
+                "--debug=5858"
+            ],
+            "program": "${workspaceRoot}/app.js",
+            "restart": true,
+            "port": 5858,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch via NPM",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "run-script",
+                "debug"
+            ],
+            "port": 5858
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceRoot}/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Gulp task",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "args": [
+                "task"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach",
+            "port": 5858
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Attach",
+            "port": 5858
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceRoot}",
+                "pipeProgram": "enter the fully qualified path for the pipe program name, for example '/usr/bin/ssh'",
+                "pipeArgs": [],
+                "debuggerPath": "enter the path for the debugger on the target machine, for example ~/vsdbg/vsdbg"
+            }
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickRemoteProcess}",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceRoot}",
+                "pipeProgram": "enter the fully qualified path for the pipe program name, for example '/usr/bin/ssh'",
+                "pipeArgs": [],
+                "debuggerPath": "enter the path for the debugger on the target machine, for example ~/vsdbg/vsdbg"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
         {
             "name": ".NET Core Launch (console)",
             "type": "coreclr",
