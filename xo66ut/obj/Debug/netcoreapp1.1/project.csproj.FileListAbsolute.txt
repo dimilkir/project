@@ -1,0 +1,8 @@
+/home/ilya/project/xo66ut/bin/Debug/netcoreapp1.1/project.deps.json
+/home/ilya/project/xo66ut/bin/Debug/netcoreapp1.1/project.runtimeconfig.json
+/home/ilya/project/xo66ut/bin/Debug/netcoreapp1.1/project.runtimeconfig.dev.json
+/home/ilya/project/xo66ut/bin/Debug/netcoreapp1.1/project.dll
+/home/ilya/project/xo66ut/bin/Debug/netcoreapp1.1/project.pdb
+/home/ilya/project/xo66ut/obj/Debug/netcoreapp1.1/project.AssemblyInfo.cs
+/home/ilya/project/xo66ut/obj/Debug/netcoreapp1.1/project.dll
+/home/ilya/project/xo66ut/obj/Debug/netcoreapp1.1/project.pdb
