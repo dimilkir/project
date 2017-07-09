@@ -15,8 +15,8 @@ namespace ConsoleApp1
             do{
                 Console.Clear();
                 Console.WriteLine("Пидор Димка или нет?");
-                Console.WriteLine("1. Димка Пидор, я согласен");
-                Console.WriteLine("2. Нужны доказательства");
+                Console.WriteLine("Димка Пидор, я согласен = жми ""1"");
+                Console.WriteLine("Нужны доказательства = press any key");
                 inp = Console.ReadLine().ToString();
 
             if (inp != "1")
