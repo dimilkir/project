@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{956813CC-26B6-470C-A013-5B461589D5C8}</ProjectGuid>
+    <ProjectGuid>{394C84E9-0C52-4770-A31D-F660F11BE9C7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>КааансооолеМииияяя</RootNamespace>
-    <AssemblyName>КааансооолеМииияяя</AssemblyName>
+    <RootNamespace>BestProgramEver</RootNamespace>
+    <AssemblyName>BestProgramEver</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="PidorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
