@@ -11,7 +11,7 @@ namespace ConsoleApp1
     public class DimaAss
     {       
         public static void RunFuck() {
-            String assNew = "*";
+            String assNew = ".";
             String assOld = "O";
             String name = "   <--- Димкины Булочки";
              String[] fuckDimaAss = new String[] { "8===D (_" + assNew + "_)"+name, " 8===D(_" + assNew + "_)"+name, "  8===D_" + assNew + "_)"+name, "   8===D" + assNew + "_)"+name, "    8===D_)"+name, "     8==_)"+name, "      8=_)"+name, "       8_)"+name } ;
