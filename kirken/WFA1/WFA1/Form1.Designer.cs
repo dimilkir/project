@@ -34,7 +34,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Yellow;
+            this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.button1.Location = new System.Drawing.Point(56, 44);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 128);
@@ -51,7 +51,7 @@
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "mainForm";
-            this.Text = "жми чаще";
+            this.Text = "Гипноформа";
             this.ResumeLayout(false);
 
         }
