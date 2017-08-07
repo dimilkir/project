@@ -8,56 +8,59 @@ namespace App8
 {
     class DinnerParty
     {
-        int numberOfPeople;
-        decimal CostOfBeveragesPerPerson;
-        decimal CostOfDecorations = 0;
-
         public const int CostOfFoodPerPerson = 25;
 
-        public void SetPartyOptions(int people, bool fancy)
+        public int NumberOfPeople { get; set; }
+        public bool FancyDecorations { get; set; }
+        public bool HealthyOption { get; set; }
+
+        public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecoration)
         {
-            numberOfPeople = people;
-            CalculateCostOfDecorations(fancy);
+            NumberOfPeople = numberOfPeople;
+            HealthyOption = healthyOption;
+            FancyDecorations = fancyDecoration;
         }
 
-        public int getNumberOfPeople()
+        decimal CalculateCostOfDecorations()
         {
-            return numberOfPeople;
-        }
-
-        public void SetHealthyOption(bool healthyOption)
-        {
-            if (healthyOption)
+            decimal costOfDecorations;
+            if (FancyDecorations)
             {
-                CostOfBeveragesPerPerson = 5.00M;
-            } else
-            {
-                CostOfBeveragesPerPerson = 20.00M;
-            }
-        }
-
-        public void CalculateCostOfDecorations(bool fancy)
-        {
-            if (fancy)
-            {
-                CostOfDecorations = (numberOfPeople * 15.00M) + 50M;
+                costOfDecorations = (NumberOfPeople * 15M) + 50M;
             }
             else
             {
-                CostOfDecorations = (numberOfPeople * 7.50M) + 30M;
+                costOfDecorations = (NumberOfPeople * 7.5M) + 30M;
             }
+            return costOfDecorations;
         }
 
-        public decimal CalculateCost(bool healthyOption)
+        decimal CalculateCostOfBeveragesPerPerson()
         {
-            decimal totalCost = CostOfDecorations + ((CostOfBeveragesPerPerson + CostOfFoodPerPerson) * numberOfPeople);
-            if (healthyOption)
+            decimal costOfBeveragesPerPerson;
+            if (HealthyOption)
             {
-                return totalCost * .95M;
-            } else
+                costOfBeveragesPerPerson = 5M;
+            }
+            else
             {
+                costOfBeveragesPerPerson = 20M;
+            }
+            return costOfBeveragesPerPerson;
+        }
+
+        public decimal Cost
+        {
+            get
+            {
+                decimal totalCost = CalculateCostOfDecorations();
+                totalCost += ((CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople);
+                if (HealthyOption)
+                {
+                    totalCost *= .95M;
+                }
                 return totalCost;
-            }           
+            }
         }
     }
 }
