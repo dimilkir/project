@@ -27,7 +27,9 @@ namespace App9
 
         bool check(int Value)
         {
-            if (Value == (Properties.Resources._3.Size.Height - Properties.Resources._3.Size.Width) * 3) { MessageBox.Show("\u041E\u0422\u0421\u041E\u0421\u0418\u0020\u0423\u0020\u0422\u0420\u0410\u041A\u0422\u041E\u0420\u0418\u0421\u0422\u0410\u0021\u0021\u0021"); } ;
+            if (Value == (Properties.Resources._3.Size.Height - Properties.Resources._3.Size.Width) * 3) {
+                MessageBox.Show("\u041E\u0422\u0421\u041E\u0421\u0418\u0020\u0423\u0020\u0422\u0420\u0410\u041A\u0422\u041E\u0420\u0418\u0421\u0422\u0410\u0021\u0021\u0021");
+            }
             return Value > bananas.Minimum;
         }
     }
