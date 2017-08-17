@@ -6,11 +6,11 @@ namespace App10
     {
         static void Main(string[] args)
         {
-            Owner owner = new Owner();
-            Safe safe = new Safe();
+            Dimka dimka = new Dimka();
+            BananaBox bananaBox = new BananaBox();
 
-            Thief thief = new Thief();
-            thief.OpenSafe(safe, owner);
+            Pluha pluha = new Pluha();
+            pluha.OpenBananaBox(bananaBox, dimka);
 
             Console.ReadKey();
         }
