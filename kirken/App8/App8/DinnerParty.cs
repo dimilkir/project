@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace App8
+﻿namespace App8
 {
-    class DinnerParty
+    class DinnerParty : Party
     {
-        public const int CostOfFoodPerPerson = 25;
-
-        public int NumberOfPeople { get; set; }
-        public bool FancyDecorations { get; set; }
         public bool HealthyOption { get; set; }
 
         public DinnerParty(int numberOfPeople, bool healthyOption, bool fancyDecoration)
@@ -19,20 +9,6 @@ namespace App8
             NumberOfPeople = numberOfPeople;
             HealthyOption = healthyOption;
             FancyDecorations = fancyDecoration;
-        }
-
-        decimal CalculateCostOfDecorations()
-        {
-            decimal costOfDecorations;
-            if (FancyDecorations)
-            {
-                costOfDecorations = (NumberOfPeople * 15M) + 50M;
-            }
-            else
-            {
-                costOfDecorations = (NumberOfPeople * 7.5M) + 30M;
-            }
-            return costOfDecorations;
         }
 
         decimal CalculateCostOfBeveragesPerPerson()
@@ -49,11 +25,11 @@ namespace App8
             return costOfBeveragesPerPerson;
         }
 
-        public decimal Cost
+        public override decimal Cost
         {
             get
             {
-                decimal totalCost = CalculateCostOfDecorations();
+                decimal totalCost = base.Cost;
                 totalCost += ((CalculateCostOfBeveragesPerPerson() + CostOfFoodPerPerson) * NumberOfPeople);
                 if (HealthyOption)
                 {
