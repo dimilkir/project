@@ -1,12 +1,7 @@
-﻿
-namespace App8
+﻿namespace App8
 {
-    class BirthdayParty
+    class BirthdayParty : Party
     {
-        public const int CostOfFoodPerPerson = 25;
-
-        public int NumberOfPeople { get; set; }
-        public bool FancyDecorations { get; set; }
         public string CakeWriting { get; set; }
         
         public BirthdayParty(int numberOfPeople, bool fancyDecorations, string cakeWriting)
@@ -54,21 +49,11 @@ namespace App8
             }
         }
 
-        decimal CalculateCostOfDecorations()
-        {
-            decimal costOfDecorations;
-            if (FancyDecorations)
-                costOfDecorations = (NumberOfPeople * 15M) + 50M;
-            else
-                costOfDecorations = (NumberOfPeople * 7.5M) + 30M;
-            return costOfDecorations;
-        }
-
-        public decimal Cost
+        public override decimal Cost
         {
             get
             {
-                decimal totalCost = CalculateCostOfDecorations();
+                decimal totalCost = base.Cost;
                 totalCost += CostOfFoodPerPerson * NumberOfPeople;
                 decimal cakeCost;
                 if (CakeSize() == 8)
